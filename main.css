@@ -1,0 +1,157 @@
+body {
+    background-color: #ece9e6;
+    color: #333
+}
+
+#logo-img {
+    width: 50px;
+    height: 50px;
+}
+#logo {
+    width: 10%;
+}
+#dashboard-header {
+    width: 25%;
+    text-align: center;
+    font-family: 'Playfair Display';
+}
+
+.dashboard{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+}
+
+#tableBox {
+    height: 45vw;
+}
+
+.dashboard td {
+    width: 70%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#date-box {
+    height: 5%;
+}
+#date {
+    text-align: right;
+    font-size: 13px;
+    font-style: serif;
+}
+
+#legendGrid {
+    height: 50%;
+}
+
+table#legend {
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    font-family: 'IBM Plex Serif', serif;
+    border: 1px solid grey;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: right;
+}
+
+tr#sources {
+    font-weight: bold;
+}
+tr#loads {
+    font-weight: bold;
+}
+tr#net {
+    font-weight: bold;
+}
+tr#renewables {
+    font-weight: bold;
+}
+
+td.cell-title {
+    width: 40%;
+}
+td.cell-total {
+    width: 10%;
+    text-align: right;
+}
+td.cell-percent {
+    width: 30%;
+    text-align: right;
+}
+td.cell-price {
+
+    text-align: right;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: white;
+    cursor: pointer;
+}
+#barButton {
+    border-radius: 15px 0px 0px 15px;
+}
+#pieButton {
+    border-radius: 0px 15px 15px 0px;
+}
+.active {
+    background-color: #f35020;
+    color: white;
+}
+
+.chart {
+    width: 100%;
+}
+#donutChart {
+    width: 60%;
+    margin: 0 auto;
+}
+.square {
+    width: 7px;
+    vertical-align: middle;
+    height: 7px;
+    display: inline-block;
+    margin: 1px;
+    border: 1px solid;
+}
+
+.wind {
+    background-color: #437607;
+}
+.black_coal {
+   background-color: #121212; 
+}
+.distillate {
+    background-color: #C74523;
+}
+.hydro {
+    background-color: #4582B4;
+}
+.gas_ccgt {
+    background-color: #FDB462;
+}
+.exports {
+    background-color: #977AB1;
+}
+.pumps {
+    background-color: #88AFD0;
+}
+

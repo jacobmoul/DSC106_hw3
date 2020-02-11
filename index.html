@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<document>
+    <head></head>
+        <!-- HighCharts library import -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+        <title>DSC106 HW3 Dashboard</title>
+    <body>
+        <h1>
+            <table id="dashboard-header">
+                <tr>
+                    <td id="logo">
+                        <img id="logo-img" src="assets/homer_logo.png"> 
+                    </td>
+                    <td>
+                        Energy
+                    </td>
+                    <td>
+                        Springfield
+                    </td>
+                </tr>
+            </table>
+        </h1>
+        <div id="tableBox">
+            <table class="dashboard">
+                <tr id="date-box" style="height: 5%;">
+                    <td></td>
+                    <td id="date">Date</td>
+                </tr>
+                <tr>
+                    <td class="container" rowspan="3">
+                        <table id="sharedGrid" class="container">
+                            <tr style="height: 50%;">
+                                <td id="energyChart" class="chart">energy chart</td>
+                            </tr>
+                            <tr style="height: 30%;">
+                                <td id="priceChart" class="chart">price chart</td>
+                            </tr>
+                            <tr>
+                                <td id="tempChart" class="chart">temp chart</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id="legendGrid">
+                        <!-- <tr style="height: 5%;">
+                            <td id="date">Date</td>
+                        </tr> -->
+                        <table id="legend" class="legend" border="1">
+                            <tr id="header">
+                                <th class="cell-title"></th>
+                                <th class="cell-total">Power</br>MW</th>
+                                <th class="cell-percent">Contribution</br>to demand</th>
+                                <th class="cell-price">Av. Value</br>$/MWh</th>
+                            </tr>
+                            <tr id="sources">
+                                <td class="cell-title"><strong>Sources</strong></td>
+                                <td class="cell-total">total MW</td>
+                                <td class="cell-percent"></td>
+                                <td class="cell-price">total price</td>
+                            </tr>
+                            <tr id="wind">
+                                <td class="cell-title">
+                                    <div class='square wind'></div> Wind
+                                </td>
+                                <td class="cell-total">wind MW</td>
+                                <td class="cell-percent">% wind</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="hydro">
+                                <td class="cell-title">
+                                    <div class='square hydro'></div> Hydro
+                                </td>
+                                <td class="cell-total">hydro MW</td>
+                                <td class="cell-percent">% hydro</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="gas_ccgt" >
+                                <td class="cell-title">
+                                    <div class='square gas_ccgt'></div> Gas (CCGT)
+                                </td>
+                                <td class="cell-total">gas MW</td>
+                                <td class="cell-percent">% gas</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="distillate"  >
+                                <td class="cell-title">
+                                    <div class='square distillate'></div> Distillate
+                                </td>
+                                <td class="cell-total">distillate MW</td>
+                                <td class="cell-percent">% distillate</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="black_coal" >
+                                <td class="cell-title">
+                                    <div class='square black_coal'></div> Black Coal
+                                </td>
+                                <td class="cell-total">coal MW</td>
+                                <td class="cell-percent">% coal</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="loads" >
+                                <td class="cell-title"><strong>Loads</strong></td>
+                                <td class="cell-total">total</td>
+                                <td class="cell-percent"></td>
+                                <td class="cell-price"></td>
+                            </tr>
+                            <tr id="exports">
+                                <td class="cell-title">
+                                    <div class='square exports'></div> Exports
+                                </td>
+                                <td class="cell-total" >exports MW</td>
+                                <td class="cell-percent" >% exports</td>
+                                <td class="cell-price" >-</td>
+                            </tr>
+                            <tr id="pumps" >
+                                <td class="cell-title">
+                                    <div class='square pumps'></div> Pumps
+                                </td>
+                                <td class="cell-total">pumps MW</td>
+                                <td class="cell-percent">% pumps</td>
+                                <td class="cell-price">-</td>
+                            </tr>
+                            <tr id="net" >
+                                <td class="cell-title">Net</td>
+                                <td class="cell-total">total</td>
+                                <td class="cell-percent"></td>
+                                <td class="cell-price"></td>
+                            </tr>
+                            <tr id="renewables" >
+                                <td class="cell-title">Renewables</td>
+                                <td class="cell-total"></td>
+                                <td class="cell-percent">% renewables</td>
+                                <td class="cell-price"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="height:5%;">
+                    <td id="buttons">
+                        <center>
+                            <button id="barButton" class="btn" onclick="toggleBar()">bar</button><!--
+                            --><button id="pieButton" class="btn active" onclick="togglePie()">pie</button>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="donutChart" class="container"></td>
+                </tr>
+            </table>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</document>

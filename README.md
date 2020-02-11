@@ -1,2 +1,6 @@
-# DSC106_hw3
-interactive dashboard about Springfield Energy Usage (from the Simpsons)
+Due to my limited JS knowledge, this dashboard may suffer from poor use/misuse of asynchronous practices. It works as expected in my browser, but I am not entirely confident that my implementation will work as well when loaded in another place. Occasionally, the crosshair for the area chart was 30 minutes ahead of the other two crosshairs due to my event listener implementation.
+
+The style and format of particular elements of this dashboard (for example, the table styling), gave me a fair amount of trouble and so I had to accept style that was not entirely consistent with the dashboard we were tasked with recreating. Besides minor differences in font though, I think my submission matches fairly well the style and layout of the original dashboard. Additionally, various chart stylings could not be applied in time, or could not be figured out easily enough to worry about doing.
+I attempted to use the fa-chart icons for bar and pie but was unable to make them work and so I settled with "bar" and "pie" instead.
+
+The resources I used most heavily for this assignment were the Highcharts API Documentation and Stack Overflow, the saviour of any coding assignment.
